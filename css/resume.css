@@ -110,6 +110,10 @@ section.resume-section {
   padding-bottom: 5rem !important;
 }
 
+section.resume-section .resume-item .resume-content .cv-skills {
+  margin-top: -0.5em;
+}
+
 section.resume-section .resume-item .resume-date {
   min-width: none;
 }

@@ -3,7 +3,11 @@ section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   .resume-item {
-    .resume-content {}
+    .resume-content {
+      .cv-skills {
+        margin-top: -0.5em;
+      }
+    }
     .resume-date {
       min-width: none;
     }
