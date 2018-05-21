@@ -59,6 +59,10 @@ h2 {
   color: #17a2b8;
 }
 
+.list-social-icons li.list-inline-item:not(:last-child) {
+  margin-right: 0;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase;

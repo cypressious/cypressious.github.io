@@ -5,6 +5,7 @@ body {
   padding-top: 54px;
   color: $gray-600;
 }
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
@@ -58,5 +59,11 @@ h2 {
     &:hover {
       color: $primary;
     }
+  }
+}
+
+.list-social-icons {
+  li.list-inline-item:not(:last-child) {
+    margin-right: 0;
   }
 }
