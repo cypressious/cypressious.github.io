@@ -190,3 +190,9 @@ a {
 a:hover, a:focus, a:active {
   color: #0f6674;
 }
+
+@media (min-width: 992px) {
+  .body-image {
+    display: none;
+  }
+}
