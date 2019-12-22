@@ -1,0 +1,33 @@
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #BD5D38 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$primary: $cyan !default;
+$success: $green !default;
+$info: $blue !default;
+$link: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+$menu-item-active-background-color: $primary;
+
+@import "~bulma/bulma";
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
