@@ -2,7 +2,7 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome';
-import 'prismjs/themes/prism.css';
+// import 'prismjs/themes/prism.css';
 import DefaultLayout from '~/layouts/Default.vue';
 import './styles/fontAwesomeIcons';
 import './styles/index.scss';

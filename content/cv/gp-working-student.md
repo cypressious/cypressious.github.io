@@ -5,4 +5,4 @@ when: 2014 - 2016
 order: 3
 tags: [Java, Kotlin]
 ---
-Working on the Android app of [www.busradar.com](https://busradar.com). 
+Working on the Android app of [busradar.com](https://www.busradar.com). 

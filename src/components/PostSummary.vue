@@ -1,7 +1,5 @@
 <template>
-    <DatedElement :title="post.title" :sub-title="post.description" :date="post.date">
-        <g-link :to="post.path" class="read">Read More...</g-link>
-    </DatedElement>
+    <DatedElement :title="post.title" :sub-title="post.description" :date="post.date" :href="post.path" />
 </template>
 
 <script lang="ts">

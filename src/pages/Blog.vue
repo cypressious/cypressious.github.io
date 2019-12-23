@@ -25,7 +25,7 @@ export default class Blog extends Vue {
 
 <page-query>
 query {
-    allPost {
+    allPost(sortBy: "date", order: DESC) {
         totalCount
         edges {
             node {

@@ -42,6 +42,7 @@ module.exports = {
     ],
     transformers: {
         remark: {
+            autolinkClassName: 'hashtag',
             plugins: [
                 '@gridsome/remark-prismjs'
             ]

@@ -6,6 +6,10 @@
     padding-bottom: 2rem;
 }
 
+.container{
+    max-width: 60em;
+}
+
 @media (max-width: $desktop) {
     .main-content {
         padding-left: .5rem;
