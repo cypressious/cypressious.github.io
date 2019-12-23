@@ -2,9 +2,11 @@
 title: "Your Second Firefox extension in Kotlin"
 description: "Writing a more complicated Browser Extension in KotlinJS"
 date: 2017-11-27
+slug: kotlin-second-webextension
+twitter: https://twitter.com/Cypressious/status/935239599147888640
 ---
 
-This post is the sequel [Your First Firefox (Web)extension in Kotlin](/blog/your-first-firefox-web-extension-in-kotlin/). You should read it for the requirements and the basic setup of a Firefox extension written in Kotlin.
+This post is the sequel [Your First Firefox (Web)extension in Kotlin](/blog/kotlin-first-webextension/). You should read it for the requirements and the basic setup of a Firefox extension written in Kotlin.
 
 In this post we are going to rewrite [Your second extension](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension) from the Mozilla tutorials in Kotlin. The extension consists of a toolbar button with a popup that allows you to replace the current tab’s content with an image of a beast.
 

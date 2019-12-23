@@ -40,7 +40,7 @@ type Cv implements Node {
     id: ID!
     order: Int
     path(to: String = "default"): String
-    tags: String
+    tags: [String]
     timeToRead(
         #Words per minute
         speed: Int = 230
@@ -128,6 +128,7 @@ type Post implements Node {
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
     id: ID!
     path(to: String = "default"): String
+    slug: String
     timeToRead(
         #Words per minute
         speed: Int = 230
@@ -174,12 +175,7 @@ type Publication implements Node {
         locale: String
     ): Date
     description: String
-    displayDate(
-        #Date format
-        format: String,
-        #Locale
-        locale: String
-    ): Date
+    displayDate: String
     excerpt: String
     fileInfo: Publication_FileInfo
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
@@ -404,7 +400,7 @@ input CvFilterInput {
     id: IDQueryOperatorInput
     order: IntQueryOperatorInput
     path: StringQueryOperatorInput
-    tags: StringQueryOperatorInput
+    tags: StringListQueryOperatorInput
     title: StringQueryOperatorInput
     when: StringQueryOperatorInput
 }
@@ -510,6 +506,7 @@ input PostFilterInput {
     fileInfo: Post_FileInfoFilterInput
     id: IDQueryOperatorInput
     path: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
 }
 
@@ -524,7 +521,7 @@ input PublicationFilterInput {
     content: StringQueryOperatorInput
     date: DateQueryOperatorInput
     description: StringQueryOperatorInput
-    displayDate: DateQueryOperatorInput
+    displayDate: StringQueryOperatorInput
     excerpt: StringQueryOperatorInput
     fileInfo: Publication_FileInfoFilterInput
     id: IDQueryOperatorInput
@@ -543,6 +540,17 @@ input Publication_FileInfoFilterInput {
 input SortArgument {
     by: String! = "date"
     order: SortOrder = DESC
+}
+
+input StringListQueryOperatorInput {
+    "Filter by property containing the provided value."
+    contains: [String]
+    "Filter by property containing any of the provided values."
+    containsAny: [String]
+    "Filter by property containing none of the provided values."
+    containsNone: [String]
+    "Filter which have an array property of specified size."
+    size: Int
 }
 
 input StringQueryOperatorInput {

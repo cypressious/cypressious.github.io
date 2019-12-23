@@ -2,6 +2,7 @@
 title: "RxJava & Kotlin: Conditionally delaying the first item in a stream"
 description: "Using a Kotlin Extension Function to solve an RxJava problem"
 date: 2016-05-25
+slug: kotlin-rxjava-delay-subscription
 ---
 
 In my application, I recently had the following requirement: In a reactive stream of items, wait until one specific item is emitted, then emit all items to the observer. If that item isn’t found, don’t emit anything and terminate with an error.

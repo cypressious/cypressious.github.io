@@ -2,6 +2,8 @@
 title: "Your First Firefox (Web)extension in Kotlin"
 description: "Writing a Browser Extension in KotlinJS"
 date: 2017-11-18
+slug: kotlin-first-webextension
+twitter: https://twitter.com/Cypressious/status/931974273920651264
 ---
 
 Kotlin, my favourite programming language, has seen a fast adoption on platforms like Android or Server where the code is compiled to Java bytecode. However, as Kotlin also supports compilation to Javascript, the language is starting to receive attention in the Web ecosystem as well.
@@ -64,7 +66,7 @@ In this file we declare that our extension will inject a content script in any w
 
 ## The code
 
-Next, we create a file main.kt in the src/main/kotlin directory. This code will be run, whenever a matching site will be loaded. The entry point for our code is a standard main function. Inside it, we access the body of the document and apply a border style.
+Next, we create a file `main.kt` in the `src/main/kotlin` directory. This code will be run, whenever a matching site will be loaded. The entry point for our code is a standard main function. Inside it, we access the body of the document and apply a border style.
 
 ```kotlin
 import kotlin.browser.document
@@ -114,4 +116,4 @@ When we switch back to Firefox, we see (after a short delay) that our changes ar
 
 In this post we saw how to write a simple Firefox extension in Kotlin JS that injects a content script. The setup was fairly easy and we didn’t hit any major roadblocks. Additionally, the workflow including continuous building and live reloading the extension turned out to be pretty comfortable.
 
-In the follow-up post [Your Second Firefox extension in Kotlin](/blog/your-second-firefox-extension-in-kotlin/) I’m diving deeper in the extension development process and show how to call Browser APIs.
+In the follow-up post [Your Second Firefox extension in Kotlin](/blog/kotlin-second-webextension/) I’m diving deeper in the extension development process and show how to call Browser APIs.
