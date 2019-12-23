@@ -5,6 +5,9 @@ export default class LinkMixin extends Vue {
     @Prop({ type: String, required: true })
     readonly icon!: string;
 
+    @Prop({ type: String, default: 'fab' })
+    readonly iconCategory!: string;
+
     @Prop({ type: String, required: true })
     readonly href!: string;
 

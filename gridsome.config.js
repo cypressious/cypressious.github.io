@@ -25,6 +25,20 @@ module.exports = {
                 typeName: 'Cv'
             }
         },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: 'content/publications/**/*.md',
+                typeName: 'Publication'
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: 'content/talks/**/*.md',
+                typeName: 'Talk'
+            }
+        },
     ],
     transformers: {
         remark: {

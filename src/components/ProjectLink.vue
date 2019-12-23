@@ -1,6 +1,6 @@
 <template>
     <a :href="href" target="_blank" rel="noopener" class="button is-link">
-        <span class="icon"><FontAwesomeIcon :icon="['fab', icon]"/></span>
+        <span class="icon"><FontAwesomeIcon :icon="[iconCategory, icon]"/></span>
         <span>{{ title }}</span>
     </a>
 </template>

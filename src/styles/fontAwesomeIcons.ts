@@ -8,8 +8,9 @@ import {
     faTwitter,
     faXing
 } from '@fortawesome/free-brands-svg-icons';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faEye, faFilePdf, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
-    faCircle, faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5
+    faCircle, faEye, faFilePdf, faVideo,
+    faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5
 );

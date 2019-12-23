@@ -33,8 +33,10 @@
 
                 <div class="navbar-menu" :class="{'is-active': isBurgerToggled }">
                     <div class="navbar-start">
-                        <g-link class="navbar-item" to="/blog/">Blog</g-link>
                         <g-link class="navbar-item" to="/cv/">CV</g-link>
+                        <g-link class="navbar-item" to="/publications/">Publications</g-link>
+                        <g-link class="navbar-item" to="/talks/">Talks</g-link>
+                        <g-link class="navbar-item" to="/blog/">Blog</g-link>
                     </div>
                 </div>
             </div>

@@ -154,6 +154,64 @@ type Post_FileInfo {
     path: String
 }
 
+type Publication implements Node {
+    belongsTo(
+        filter: BelongsToFilterInput,
+        limit: Int,
+        order: SortOrder = DESC,
+        page: Int,
+        #Defaults to 25 when page is provided.
+        perPage: Int,
+        skip: Int = 0,
+        sort: [SortArgument!],
+        sortBy: String = "date"
+    ): NodeBelongsTo
+    content: String
+    date(
+        #Date format
+        format: String,
+        #Locale
+        locale: String
+    ): Date
+    description: String
+    displayDate(
+        #Date format
+        format: String,
+        #Locale
+        locale: String
+    ): Date
+    excerpt: String
+    fileInfo: Publication_FileInfo
+    headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
+    id: ID!
+    path(to: String = "default"): String
+    timeToRead(
+        #Words per minute
+        speed: Int = 230
+    ): Int
+    title: String
+    url: String
+}
+
+type PublicationConnection implements NodeConnection {
+    edges: [PublicationEdge]
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type PublicationEdge implements NodeConnectionEdge {
+    next: Publication
+    node: Publication
+    previous: Publication
+}
+
+type Publication_FileInfo {
+    directory: String
+    extension: String
+    name: String
+    path: String
+}
+
 type Query {
     allCv(
         #Filter for Cv nodes.
@@ -183,6 +241,30 @@ type Query {
         sort: [SortArgument],
         sortBy: String = "date"
     ): PostConnection
+    allPublication(
+        #Filter for Publication nodes.
+        filter: PublicationFilterInput,
+        limit: Int,
+        order: SortOrder = DESC,
+        page: Int,
+        #Defaults to 25 when page is provided.
+        perPage: Int,
+        skip: Int = 0,
+        sort: [SortArgument],
+        sortBy: String = "date"
+    ): PublicationConnection
+    allTalk(
+        #Filter for Talk nodes.
+        filter: TalkFilterInput,
+        limit: Int,
+        order: SortOrder = DESC,
+        page: Int,
+        #Defaults to 25 when page is provided.
+        perPage: Int,
+        skip: Int = 0,
+        sort: [SortArgument],
+        sortBy: String = "date"
+    ): TalkConnection
     cv(
         id: ID,
         #Will return an error if not nullable.
@@ -198,12 +280,78 @@ type Query {
         nullable: Boolean = false,
         path: String
     ): Post
+    publication(
+        id: ID,
+        #Will return an error if not nullable.
+        nullable: Boolean = false,
+        path: String
+    ): Publication
+    talk(
+        id: ID,
+        #Will return an error if not nullable.
+        nullable: Boolean = false,
+        path: String
+    ): Talk
 }
 
 type RemarkHeading {
     anchor: String
     depth: Int
     value: String
+}
+
+type Talk implements Node {
+    belongsTo(
+        filter: BelongsToFilterInput,
+        limit: Int,
+        order: SortOrder = DESC,
+        page: Int,
+        #Defaults to 25 when page is provided.
+        perPage: Int,
+        skip: Int = 0,
+        sort: [SortArgument!],
+        sortBy: String = "date"
+    ): NodeBelongsTo
+    content: String
+    date(
+        #Date format
+        format: String,
+        #Locale
+        locale: String
+    ): Date
+    excerpt: String
+    fileInfo: Talk_FileInfo
+    headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
+    id: ID!
+    page: String
+    path(to: String = "default"): String
+    recording: String
+    slides: File
+    timeToRead(
+        #Words per minute
+        speed: Int = 230
+    ): Int
+    title: String
+    where: String
+}
+
+type TalkConnection implements NodeConnection {
+    edges: [TalkEdge]
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type TalkEdge implements NodeConnectionEdge {
+    next: Talk
+    node: Talk
+    previous: Talk
+}
+
+type Talk_FileInfo {
+    directory: String
+    extension: String
+    name: String
+    path: String
 }
 
 enum ImageFit {
@@ -238,6 +386,8 @@ enum SortOrder {
 enum TypeName {
     Cv
     Post
+    Publication
+    Talk
 }
 
 input BelongsToFilterInput {
@@ -287,6 +437,19 @@ input DateQueryOperatorInput {
     ne: Date
     "Filter by property not matching any of the provided values."
     nin: [Date]
+}
+
+input FileQueryOperatorInput {
+    "Filter by property of (strict) equality."
+    eq: File
+    "Filter by property matching any of the provided values."
+    in: [File]
+    "Filter by property not equal to provided value."
+    ne: File
+    "Filter by property not matching any of the provided values."
+    nin: [File]
+    "Filter by property matching provided regular expression."
+    regex: String
 }
 
 input IDQueryOperatorInput {
@@ -357,6 +520,26 @@ input Post_FileInfoFilterInput {
     path: StringQueryOperatorInput
 }
 
+input PublicationFilterInput {
+    content: StringQueryOperatorInput
+    date: DateQueryOperatorInput
+    description: StringQueryOperatorInput
+    displayDate: DateQueryOperatorInput
+    excerpt: StringQueryOperatorInput
+    fileInfo: Publication_FileInfoFilterInput
+    id: IDQueryOperatorInput
+    path: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+    url: StringQueryOperatorInput
+}
+
+input Publication_FileInfoFilterInput {
+    directory: StringQueryOperatorInput
+    extension: StringQueryOperatorInput
+    name: StringQueryOperatorInput
+    path: StringQueryOperatorInput
+}
+
 input SortArgument {
     by: String! = "date"
     order: SortOrder = DESC
@@ -375,6 +558,27 @@ input StringQueryOperatorInput {
     regex: String
 }
 
+input TalkFilterInput {
+    content: StringQueryOperatorInput
+    date: DateQueryOperatorInput
+    excerpt: StringQueryOperatorInput
+    fileInfo: Talk_FileInfoFilterInput
+    id: IDQueryOperatorInput
+    page: StringQueryOperatorInput
+    path: StringQueryOperatorInput
+    recording: StringQueryOperatorInput
+    slides: FileQueryOperatorInput
+    title: StringQueryOperatorInput
+    where: StringQueryOperatorInput
+}
+
+input Talk_FileInfoFilterInput {
+    directory: StringQueryOperatorInput
+    extension: StringQueryOperatorInput
+    name: StringQueryOperatorInput
+    path: StringQueryOperatorInput
+}
+
 input TypeNameQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: TypeName
@@ -389,9 +593,9 @@ input TypeNameQueryOperatorInput {
 
 scalar Date
 
+scalar File
+
 "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
 scalar JSON
-
-scalar File
 
 scalar Image

@@ -26,7 +26,8 @@
                     <li>Kotlin</li>
                     <li>Gradle</li>
                     <li>RxJava</li>
-                    <li>IntelliJ IDEA & Android Studio</li>
+                    <li>IntelliJ IDEA</li>
+                    <li>Android Studio</li>
                 </ul>
             </div>
         </div>
