@@ -1,4 +1,4 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
@@ -17,7 +17,14 @@ module.exports = {
                 typeName: 'Post',
                 route: '/blog/:slug'
             }
-        }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: 'content/cv/**/*.md',
+                typeName: 'Cv'
+            }
+        },
     ],
     transformers: {
         remark: {
