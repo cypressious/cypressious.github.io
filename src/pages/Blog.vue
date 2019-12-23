@@ -33,7 +33,7 @@ query {
                 title
                 timeToRead
                 description
-                date (format: "D MMMM YYYY")
+                date (format: "YYYY-MM-DD")
                 path
             }
         }

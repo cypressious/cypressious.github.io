@@ -1,20 +1,15 @@
 <template>
-    <div class="post-list">
-
-        <p class="date" v-html="post.date"/>
-        <h1 class="title">
-            <g-link :to="post.path" class="read"><span class="has-text-black" v-html="post.title"/></g-link>
-        </h1>
-
-        <p class="description" v-html="post.description"/>
+    <DatedElement :title="post.title" :sub-title="post.description" :date="post.date">
         <g-link :to="post.path" class="read">Read More...</g-link>
-    </div>
+    </DatedElement>
 </template>
 
 <script lang="ts">
+import DatedElement from '@/components/DatedElement.vue';
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component
+@Component({
+    components: { DatedElement }
+})
 export default class PostSummary extends Vue {
     @Prop(Object) readonly post!: any;
 }

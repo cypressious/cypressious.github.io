@@ -1,6 +1,5 @@
 <style scoped>
 .profile-picture {
-    width: 100px;
     border-radius: 50%;
 }
 
@@ -11,11 +10,10 @@
 
 <template>
     <Layout>
-
-        <div class="paragraph">
+        <div class="mb-2">
             <div class="columns mb-3">
                 <div class="column is-narrow">
-                    <img src="profile.jpg" class="profile-picture" alt="Profile picture">
+                    <g-image src="../assets/profile.jpg" class="profile-picture" alt="Profile picture" width="100"/>
                 </div>
                 <div class="column">
                     <h1 class="title is-1">Kirill <span class="has-text-primary">Rakhman</span></h1>
@@ -46,17 +44,35 @@
 
             <Technologies/>
         </div>
+
+        <div class="paragraph">
+            <h2 class="is-size-3 mb-1">Latest Talk</h2>
+
+            <Talk :talk="$page.allTalk.edges[0].node" style="margin-bottom: 1rem"/>
+
+            <g-link to="/talks" class="is-size-4">More Talks...</g-link>
+        </div>
+
+        <div class="paragraph">
+            <h2 class="is-size-3 mb-1">Latest Blog Post</h2>
+
+            <PostSummary :post="$page.allPost.edges[0].node" style="margin-bottom: 1rem"/>
+
+            <g-link to="/blog" class="is-size-4">More Blog Posts...</g-link>
+        </div>
     </Layout>
 </template>
 
 <script lang="ts">
+import PostSummary from '@/components/PostSummary.vue';
 import Projects from '@/components/Projects.vue';
+import Talk from '@/components/Talk.vue';
 import { Component, Vue } from 'vue-property-decorator';
 import SocialLinks from '../components/SocialLinks.vue';
 import Technologies from '../components/Technologies.vue';
 
 @Component({
-    components: { Projects, Technologies, SocialLinks },
+    components: { PostSummary, Talk, Projects, Technologies, SocialLinks },
     metaInfo: {
         title: 'Main'
     }
@@ -64,3 +80,35 @@ import Technologies from '../components/Technologies.vue';
 export default class Index extends Vue {
 }
 </script>
+
+<page-query>
+query {
+    allTalk(sortBy: "date", order: DESC, limit: 1) {
+        totalCount
+        edges {
+            node {
+                id
+                title
+                where
+                date (format: "YYYY-MM-DD")
+                slides
+                recording
+                page
+            }
+        }
+    }
+    allPost {
+        totalCount
+        edges {
+            node {
+                id
+                title
+                timeToRead
+                description
+                date (format: "YYYY-MM-DD")
+                path
+            }
+        }
+    }
+}
+</page-query>
