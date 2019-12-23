@@ -42,13 +42,13 @@
             </p>
         </div>
 
-        <div class="content" v-html="$page.post.content" />
+        <div class="content" v-html="$page.post.content"/>
 
         <hr class="mb-3">
 
         <div v-if="$page.post.twitter" class="discuss mb-3">
             <h2 class="is-size-4"><a :href="$page.post.twitter" rel="noopener" target="_blank">
-                <FontAwesomeIcon :icon="['fab', 'twitter']" />
+                <FontAwesomeIcon :icon="['fab', 'twitter']"/>
                 Discuss on Twitter
             </a></h2>
         </div>
@@ -65,7 +65,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import 'prismjs/themes/prism-tomorrow.css';
 
-@Component
+@Component({
+    metaInfo(this: Post) {
+        return {
+            title: (this as any).$page.post.title
+        };
+    }
+})
 export default class Post extends Vue {
 
 }

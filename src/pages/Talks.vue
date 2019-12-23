@@ -19,7 +19,7 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component({
     components: { Talk, ProjectLink, DatedElement },
     metaInfo: {
-        title: 'Publications'
+        title: 'Talks'
     }
 })
 export default class Talks extends Vue {

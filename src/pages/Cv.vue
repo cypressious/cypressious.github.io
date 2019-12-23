@@ -21,7 +21,7 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component({
     components: { DatedElement },
     metaInfo: {
-        title: 'Cv'
+        title: 'CV'
     }
 })
 export default class Cv extends Vue {
