@@ -5,7 +5,9 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "upgrades": "yarn upgrade-interactive --latest"
+    "upgrades": "yarn upgrade-interactive --latest",
+    "predeploy": "gridsome build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -16,6 +18,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
     "bulma": "^0.8.0",
+    "gh-pages": "^2.1.1",
     "gridsome": "^0.7.0",
     "lodash-es": "^4.17.15"
   },

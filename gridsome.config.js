@@ -6,6 +6,7 @@
 
 module.exports = {
     siteName: 'Kirill Rakhman',
+    siteUrl: 'https://rakhman.info',
     plugins: [
         {
             use: 'gridsome-plugin-typescript',
