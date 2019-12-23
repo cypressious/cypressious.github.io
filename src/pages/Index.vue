@@ -51,7 +51,6 @@
 
 <script lang="ts">
 import Projects from '@/components/Projects.vue';
-
 import { Component, Vue } from 'vue-property-decorator';
 import SocialLinks from '../components/SocialLinks.vue';
 import Technologies from '../components/Technologies.vue';

@@ -1,0 +1,39 @@
+[
+  {
+    "title": "KIT Mensa App",
+    "subtitle": "Android app for the KIT canteen plan.",
+    "tags": [
+      "Android",
+      "Java",
+      "Kotlin"
+    ],
+    "links": [
+      {
+        "icon": "google-play",
+        "title": "Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.cypressworks.mensaplan"
+      },
+      {
+        "icon": "github",
+        "title": "Github",
+        "href": "https://github.com/cypressious/KitMensaAndroid"
+      }
+    ]
+  },
+  {
+    "title": "Kotlin WebExtensions API Declarations",
+    "subtitle": "A generator for Kotlin JS declarations for the Firefox WebExtensions API.",
+    "tags": [
+      "Kotlin",
+      "JavaScript",
+      "Browser Extensions"
+    ],
+    "links": [
+      {
+        "icon": "github",
+        "title": "Github",
+        "href": "https://github.com/cypressious/kotlin-webextensions-declarations"
+      }
+    ]
+  }
+]
