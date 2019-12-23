@@ -27,10 +27,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# Editor-based Rest Client
 .idea/httpRequests
-.cache
-
 
 bin
 obj
@@ -57,3 +54,6 @@ obj
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
+
+.cache
+/src/.temp

@@ -3,12 +3,16 @@
     width: 100px;
     border-radius: 50%;
 }
+
+.paragraph {
+    margin-bottom: 4rem;
+}
 </style>
 
 <template>
     <Layout>
 
-        <div class="mb-3">
+        <div class="paragraph">
             <div class="columns mb-3">
                 <div class="column is-narrow">
                     <img src="profile.jpg" class="profile-picture" alt="Profile picture">
@@ -25,19 +29,19 @@
             </p>
         </div>
 
-        <div class="mb-2">
+        <div class="paragraph">
             <h2 class="is-size-3 mb-1">Social Links</h2>
 
             <SocialLinks/>
         </div>
 
-        <div class="mb-2">
+        <div class="paragraph">
             <h2 class="is-size-3 mb-1">Projects</h2>
 
             <Projects/>
         </div>
 
-        <div class="mb-2">
+        <div class="paragraph">
             <h2 class="is-size-3 mb-1">Technologies</h2>
 
             <Technologies/>
