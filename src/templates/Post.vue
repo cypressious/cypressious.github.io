@@ -4,6 +4,7 @@
     text-align: justify;
 }
 
+/*noinspection CssUnusedSymbol*/
 .content >>> .tag, .content >>> .number, .content >>> .label {
     display: inline;
     padding: inherit;
@@ -18,6 +19,7 @@
     margin: inherit;
 }
 
+/*noinspection CssUnusedSymbol*/
 .content >>> .hashtag:before {
     content: '#';
     margin-right: .5rem;
@@ -38,7 +40,7 @@
         <div class="post-title mb-2">
             <h1 class="title">{{ $page.post.title }}</h1>
             <p class="subtitle">
-                {{ $page.post.date }} | {{ $page.post.timeToRead }} min read
+                {{ $page.post.date }}
             </p>
         </div>
 
@@ -84,7 +86,6 @@ query Post ($path: String!) {
         title
         content
         date (format: "D MMMM YYYY")
-        timeToRead
         twitter
     }
 }

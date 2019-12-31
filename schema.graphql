@@ -134,6 +134,7 @@ type Post implements Node {
         speed: Int = 230
     ): Int
     title: String
+    twitter: String
 }
 
 type PostConnection implements NodeConnection {
@@ -508,6 +509,7 @@ input PostFilterInput {
     path: StringQueryOperatorInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
+    twitter: StringQueryOperatorInput
 }
 
 input Post_FileInfoFilterInput {

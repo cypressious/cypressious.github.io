@@ -103,7 +103,6 @@ query {
             node {
                 id
                 title
-                timeToRead
                 description
                 date (format: "YYYY-MM-DD")
                 path
