@@ -40,6 +40,29 @@ module.exports = {
                 typeName: 'Talk'
             }
         },
+        {
+            use: 'gridsome-plugin-rss',
+            options: {
+                contentTypeName: 'Post',
+                latest: true,
+                feedOptions: {
+                    title: 'Kirill Rakhman\'s Dev Blog',
+                    feed_url: 'https://rakhman.info/rss.xml',
+                    site_url: 'https://rakhman.info/blog'
+                },
+                feedItemOptions: node => ({
+                    title: node.title,
+                    description: node.description,
+                    url: 'https://rakhman.info/blog/' + node.slug,
+                    author: 'Kirill Rakhman',
+                    date: node.date
+                }),
+                output: {
+                    dir: './static',
+                    name: 'rss.xml'
+                }
+            }
+        },
     ],
     transformers: {
         remark: {
