@@ -1,32 +1,58 @@
-<style scoped>
-.content >>> p {
-    font-size: 1.25rem;
-    text-align: justify;
-}
+<style scoped lang="scss">
+@import "../styles/colors";
 
-/*noinspection CssUnusedSymbol*/
-.content >>> .tag, .content >>> .number, .content >>> .label {
-    display: inline;
-    padding: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    text-align: inherit;
-    vertical-align: inherit;
-    border-radius: inherit;
-    font-weight: inherit;
-    white-space: inherit;
-    background: inherit;
-    margin: inherit;
-}
+.content::v-deep {
+    p {
+        font-size: 1.25rem;
+        text-align: justify;
+        line-height: 1.25;
+    }
 
-/*noinspection CssUnusedSymbol*/
-.content >>> .hashtag:before {
-    content: '#';
-    margin-right: .5rem;
-}
+    .tag, .number, .label {
+        display: inline;
+        padding: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-align: inherit;
+        vertical-align: inherit;
+        border-radius: inherit;
+        font-weight: inherit;
+        white-space: inherit;
+        background: inherit;
+        margin: inherit;
+    }
 
-.content >>> a > code {
-    text-decoration-line: underline;
+    .hashtag:before {
+        content: '#';
+        margin-right: .5rem;
+    }
+
+    a > code {
+        text-decoration-line: underline;
+    }
+
+    .kotlin::after {
+        content: 'Kotlin';
+    }
+
+    .cs::after {
+        content: 'C#';
+    }
+
+    .kotlin, .cs {
+        > pre {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            display: block;
+            text-align: center;
+            font-weight: $weight-semibold;
+            text-transform: uppercase;
+            background-color: $primary;
+            color: $white;
+        }
+    }
 }
 </style>
 
