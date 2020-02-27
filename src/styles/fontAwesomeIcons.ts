@@ -1,6 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
     faAndroid,
+    faFirefoxBrowser,
     faGithub,
     faGooglePlay,
     faHtml5,
@@ -15,5 +16,6 @@ import { faArrowLeft, faCircle, faEye, faFilePdf, faVideo } from '@fortawesome/f
 
 library.add(
     faCircle, faEye, faFilePdf, faVideo, faArrowLeft,
-    faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5
+    faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5,
+    faFirefoxBrowser
 );
