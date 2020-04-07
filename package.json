@@ -10,16 +10,17 @@
     "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.27",
-    "@fortawesome/free-brands-svg-icons": "5.12.1",
-    "@fortawesome/free-solid-svg-icons": "5.12.1",
+    "@fortawesome/fontawesome-svg-core": "1.2.28",
+    "@fortawesome/free-brands-svg-icons": "5.13.0",
+    "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/vue-fontawesome": "0.1.9",
+    "@gridsome/plugin-sitemap": "0.2.3",
     "@gridsome/remark-prismjs": "0.3.0",
     "@gridsome/source-filesystem": "0.6.2",
-    "@gridsome/transformer-remark": "0.4.0",
-    "bulma": "0.8.0",
+    "@gridsome/transformer-remark": "0.5.0",
+    "bulma": "0.8.1",
     "gh-pages": "2.2.0",
-    "gridsome": "0.7.12",
+    "gridsome": "0.7.13",
     "gridsome-plugin-rss": "1.2.0",
     "lodash-es": "4.17.15"
   },
@@ -28,8 +29,8 @@
     "gridsome-plugin-typescript": "0.4.0",
     "node-sass": "4.13.1",
     "sass-loader": "8.0.2",
-    "ts-loader": "6.2.1",
-    "typescript": "3.7.5",
-    "vue-property-decorator": "8.4.0"
+    "ts-loader": "6.2.2",
+    "typescript": "3.8.3",
+    "vue-property-decorator": "8.4.1"
   }
 }
