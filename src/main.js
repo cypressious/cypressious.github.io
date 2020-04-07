@@ -18,6 +18,11 @@ export default function (Vue, { router, head, isClient }) {
         content: 'width=device-width, initial-scale=1'
     });
 
+    head.meta.push({
+        name: 'google-site-verification',
+        content: 'iUq6VtnS5zRh-s4b27kdrA1sx9a1YdgEr35fwUd4lGg'
+    });
+
     head.link.push({
         rel: 'alternate',
         type: 'application/rss+xml',
