@@ -14,13 +14,13 @@
     "@fortawesome/free-brands-svg-icons": "5.13.0",
     "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/vue-fontawesome": "0.1.9",
-    "@gridsome/plugin-sitemap": "0.2.3",
+    "@gridsome/plugin-sitemap": "0.3.0",
     "@gridsome/remark-prismjs": "0.3.0",
     "@gridsome/source-filesystem": "0.6.2",
-    "@gridsome/transformer-remark": "0.5.0",
+    "@gridsome/transformer-remark": "0.6.0",
     "bulma": "0.8.2",
     "gh-pages": "2.2.0",
-    "gridsome": "0.7.14",
+    "gridsome": "0.7.15",
     "gridsome-plugin-rss": "1.2.0",
     "lodash-es": "4.17.15"
   },
@@ -29,8 +29,8 @@
     "gridsome-plugin-typescript": "0.4.0",
     "node-sass": "4.14.1",
     "sass-loader": "8.0.2",
-    "ts-loader": "7.0.4",
-    "typescript": "3.9.2",
+    "ts-loader": "7.0.5",
+    "typescript": "3.9.3",
     "vue-property-decorator": "8.4.2"
   }
 }
