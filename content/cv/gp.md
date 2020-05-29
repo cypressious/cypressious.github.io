@@ -1,7 +1,7 @@
 ---
 title: Android & Backend developer
 at: Green Parrot GmbH
-when: 2014 - 2016
+when: 2016 - present
 order: 4
 tags: [Java, Kotlin, C#, Typescript]
 ---
