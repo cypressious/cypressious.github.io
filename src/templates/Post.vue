@@ -53,6 +53,18 @@
             color: $white;
         }
     }
+
+    kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: #fafbfc;
+        border: 1px solid #d1d5da;
+        border-radius: 6px;
+        box-shadow: inset 0 -1px 0 #d1d5da;
+        font-size: .8rem;
+    }
 }
 </style>
 
