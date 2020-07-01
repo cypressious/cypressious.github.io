@@ -3,7 +3,7 @@ title: "Respecting Browser Navigation in Single Page Applications"
 description: "How to provide navigation in Single Page Applications that respects the browser"
 date: 2020-07-01
 slug: respecting-browser-navigation-spa
-twitter: 
+twitter: https://twitter.com/Cypressious/status/1278338377444622337
 ---
 
 Anchors (`<a href="...">`) offer a simple concept for navigating between web pages. Clicking on them opens the URL. When using the left mouse button, the HTML decides if the page is opened in the same tab (default) or in a new tab (`target="_blank"`). Browsers provide the user with the possibility to override this behavior by middle clicking, <kbd>CTRL</kbd> clicking or using the context menu. 
