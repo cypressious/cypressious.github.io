@@ -27,14 +27,17 @@ type Cv implements Node {
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument!],
         sortBy: String = "date"
     ): NodeBelongsTo
     content: String
-    excerpt: String
+    excerpt(
+        "Maximum length of generated excerpt (characters)"
+        length: Int = 200
+    ): String
     fileInfo: Cv_FileInfo
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
     id: ID!
@@ -42,7 +45,7 @@ type Cv implements Node {
     path(to: String = "default"): String
     tags: [String]
     timeToRead(
-        #Words per minute
+        "Words per minute"
         speed: Int = 230
     ): Int
     title: String
@@ -109,7 +112,7 @@ type Post implements Node {
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument!],
@@ -117,20 +120,23 @@ type Post implements Node {
     ): NodeBelongsTo
     content: String
     date(
-        #Date format
+        "Date format"
         format: String,
-        #Locale
+        "Locale"
         locale: String
     ): Date
     description: String
-    excerpt: String
+    excerpt(
+        "Maximum length of generated excerpt (characters)"
+        length: Int = 200
+    ): String
     fileInfo: Post_FileInfo
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
     id: ID!
     path(to: String = "default"): String
     slug: String
     timeToRead(
-        #Words per minute
+        "Words per minute"
         speed: Int = 230
     ): Int
     title: String
@@ -162,7 +168,7 @@ type Publication implements Node {
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument!],
@@ -170,20 +176,23 @@ type Publication implements Node {
     ): NodeBelongsTo
     content: String
     date(
-        #Date format
+        "Date format"
         format: String,
-        #Locale
+        "Locale"
         locale: String
     ): Date
     description: String
     displayDate: String
-    excerpt: String
+    excerpt(
+        "Maximum length of generated excerpt (characters)"
+        length: Int = 200
+    ): String
     fileInfo: Publication_FileInfo
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
     id: ID!
     path(to: String = "default"): String
     timeToRead(
-        #Words per minute
+        "Words per minute"
         speed: Int = 230
     ): Int
     title: String
@@ -211,52 +220,52 @@ type Publication_FileInfo {
 
 type Query {
     allCv(
-        #Filter for Cv nodes.
+        "Filter for Cv nodes."
         filter: CvFilterInput,
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument],
         sortBy: String = "date"
     ): CvConnection
     allPage(
-        #Filter pages.
+        "Filter pages."
         filter: PageFilterInput
     ): [Page]
     allPost(
-        #Filter for Post nodes.
+        "Filter for Post nodes."
         filter: PostFilterInput,
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument],
         sortBy: String = "date"
     ): PostConnection
     allPublication(
-        #Filter for Publication nodes.
+        "Filter for Publication nodes."
         filter: PublicationFilterInput,
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument],
         sortBy: String = "date"
     ): PublicationConnection
     allTalk(
-        #Filter for Talk nodes.
+        "Filter for Talk nodes."
         filter: TalkFilterInput,
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument],
@@ -264,7 +273,7 @@ type Query {
     ): TalkConnection
     cv(
         id: ID,
-        #Will return an error if not nullable.
+        "Will return an error if not nullable."
         nullable: Boolean = false,
         path: String
     ): Cv
@@ -273,19 +282,19 @@ type Query {
     page(path: String!): Page
     post(
         id: ID,
-        #Will return an error if not nullable.
+        "Will return an error if not nullable."
         nullable: Boolean = false,
         path: String
     ): Post
     publication(
         id: ID,
-        #Will return an error if not nullable.
+        "Will return an error if not nullable."
         nullable: Boolean = false,
         path: String
     ): Publication
     talk(
         id: ID,
-        #Will return an error if not nullable.
+        "Will return an error if not nullable."
         nullable: Boolean = false,
         path: String
     ): Talk
@@ -303,7 +312,7 @@ type Talk implements Node {
         limit: Int,
         order: SortOrder = DESC,
         page: Int,
-        #Defaults to 25 when page is provided.
+        "Defaults to 25 when page is provided."
         perPage: Int,
         skip: Int = 0,
         sort: [SortArgument!],
@@ -311,12 +320,15 @@ type Talk implements Node {
     ): NodeBelongsTo
     content: String
     date(
-        #Date format
+        "Date format"
         format: String,
-        #Locale
+        "Locale"
         locale: String
     ): Date
-    excerpt: String
+    excerpt(
+        "Maximum length of generated excerpt (characters)"
+        length: Int = 200
+    ): String
     fileInfo: Talk_FileInfo
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
     id: ID!
@@ -325,7 +337,7 @@ type Talk implements Node {
     recording: String
     slides: File
     timeToRead(
-        #Words per minute
+        "Words per minute"
         speed: Int = 230
     ): Int
     title: String
@@ -352,15 +364,15 @@ type Talk_FileInfo {
 }
 
 enum ImageFit {
-    #Embed within both provided dimensions.
+    "Embed within both provided dimensions."
     contain
-    #Crop to cover both provided dimensions.
+    "Crop to cover both provided dimensions."
     cover
-    #Ignore the aspect ratio of the input and stretch to both provided dimensions.
+    "Ignore the aspect ratio of the input and stretch to both provided dimensions."
     fill
-    #Preserving aspect ratio, resize the image to be as large as possible while ensuring its dimensions are less than or equal to both those specified.
+    "Preserving aspect ratio, resize the image to be as large as possible while ensuring its dimensions are less than or equal to both those specified."
     inside
-    #Preserving aspect ratio, resize the image to be as small as possible while ensuring its dimensions are greater than or equal to both those specified. Some of these values are based on the object-fit CSS property.
+    "Preserving aspect ratio, resize the image to be as small as possible while ensuring its dimensions are greater than or equal to both those specified. Some of these values are based on the object-fit CSS property."
     outside
 }
 
@@ -374,9 +386,9 @@ enum RemarkHeadingLevels {
 }
 
 enum SortOrder {
-    #Sort ascending
+    "Sort ascending"
     ASC
-    #Sort descending
+    "Sort descending"
     DESC
 }
 
@@ -420,6 +432,8 @@ input DateQueryOperatorInput {
     dteq: Date
     "Filter by property of (strict) equality."
     eq: Date
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property greater than provided value."
     gt: Date
     "Filter by property greater or equal to provided value."
@@ -439,6 +453,8 @@ input DateQueryOperatorInput {
 input FileQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: File
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property matching any of the provided values."
     in: [File]
     "Filter by property not equal to provided value."
@@ -452,6 +468,8 @@ input FileQueryOperatorInput {
 input IDQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: ID
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property matching any of the provided values."
     in: [ID]
     "Filter by property not equal to provided value."
@@ -465,6 +483,8 @@ input IntQueryOperatorInput {
     between: [Int]
     "Filter by property of (strict) equality."
     eq: Int
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property greater than provided value."
     gt: Int
     "Filter by property greater or equal to provided value."
@@ -484,6 +504,8 @@ input IntQueryOperatorInput {
 input JSONQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: JSON
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property matching any of the provided values."
     in: [JSON]
     "Filter by property not equal to provided value."
@@ -558,6 +580,8 @@ input StringListQueryOperatorInput {
 input StringQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: String
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property matching any of the provided values."
     in: [String]
     "Filter by property not equal to provided value."
@@ -592,6 +616,8 @@ input Talk_FileInfoFilterInput {
 input TypeNameQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: TypeName
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
     "Filter by property matching any of the provided values."
     in: [TypeName]
     "Filter by property not equal to provided value."
