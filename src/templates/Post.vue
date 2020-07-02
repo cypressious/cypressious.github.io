@@ -108,12 +108,21 @@ import 'prismjs/themes/prism-tomorrow.css';
 @Component({
     metaInfo(this: Post) {
         return {
-            title: (this as any).$page.post.title
+            title: this.$page.post.title,
+            meta:[{
+                name: 'description',
+                content: this.$page.post.description
+            }]
         };
     }
 })
 export default class Post extends Vue {
-
+    $page!: {
+        post: {
+            title: string
+            description: string
+        }
+    }
 }
 </script>
 
@@ -125,6 +134,7 @@ query Post ($path: String!) {
         content
         date (format: "D MMMM YYYY")
         twitter
+        description
     }
 }
 </page-query>
