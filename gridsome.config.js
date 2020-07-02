@@ -6,6 +6,7 @@
 
 module.exports = {
     siteName: 'Kirill Rakhman',
+    siteDescription: 'Personal Website & Blog of Kirill Rakhman',
     siteUrl: 'https://rakhman.info',
     plugins: [
         {
