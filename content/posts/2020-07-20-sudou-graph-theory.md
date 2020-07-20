@@ -3,7 +3,7 @@ title: "Solving Sudoku with Graph Theory"
 description: By transforming Sudoku state into a Graph representation we can find an interesting solution to what would otherwise be multiple nested loops.   
 date: 2020-07-20
 slug: solving-sudoku-with-graph-theory
-twitter: 
+twitter: https://twitter.com/Cypressious/status/1285284873918390274
 ---
 
 In a game of Sudoku you have to fill the numbers 1 to 9 in a 9x9 grid that is also divided into 3x3 boxes. Each row, column and box must contain each digit exactly once. A game starts with a number of given digits in the grid, and the player can use multiple techniques to deduct the missing digits.
