@@ -40,7 +40,7 @@
     "title": "Feedly Open Unread",
     "subtitle": "Firefox & Chrome extension for opening all unread items on feedly.com in new tabs",
     "tags": [
-      "Javascript",
+      "JavaScript",
       "Firefox"
     ],
     "links": [
@@ -60,7 +60,7 @@
     "title": "Container Outgoing Links",
     "subtitle": "Firefox extension for opening outgoing links from a container in the default container",
     "tags": [
-      "Javascript",
+      "JavaScript",
       "Firefox"
     ],
     "links": [
@@ -73,6 +73,26 @@
         "icon": "github",
         "title": "Github",
         "href": "https://github.com/cypressious/ff-container-outgoing-links"
+      }
+    ]
+  },
+  {
+    "title": "Vue 3 Sudoku Solver",
+    "subtitle": "A Sudoku Solver web app written in Vue 3",
+    "tags": [
+      "TypeScript", "Vue.js"
+    ],
+    "links": [
+      {
+        "icon": "globe",
+        "iconCategory": "fa",
+        "title": "Try it",
+        "href": "https://sudoku-solver.rakhman.info/"
+      },
+      {
+        "icon": "github",
+        "title": "Github",
+        "href": "https://github.com/cypressious/vue3-sudoku-solver"
       }
     ]
   }
