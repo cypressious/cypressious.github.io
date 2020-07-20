@@ -73,7 +73,10 @@ module.exports = {
             autolinkClassName: 'hashtag',
             plugins: [
                 '@gridsome/remark-prismjs'
-            ]
+            ],
+            config: {
+                footnotes: true
+            }
         }
     }
 };
