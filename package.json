@@ -25,7 +25,7 @@
     "lodash-es": "4.17.21"
   },
   "devDependencies": {
-    "@types/lodash-es": "4.17.3",
+    "@types/lodash-es": "4.17.4",
     "gridsome-plugin-typescript": "0.4.0",
     "node-sass": "5.0.0",
     "sass-loader": "10.1.1",
