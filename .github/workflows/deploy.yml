@@ -42,4 +42,9 @@ jobs:
         steps.cache-yarn-cache.outputs.cache-hit != 'true' ||
         steps.cache-node-modules.outputs.cache-hit != 'true'
       run: yarn --frozen-lockfile
+    - name: Configure git
+      run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "notifications@github.com"
+
     - run: yarn deploy
