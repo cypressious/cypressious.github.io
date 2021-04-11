@@ -3,6 +3,8 @@ name: Deploy
 on:
   push:
     branches: [ gridsome ]
+  pull_request:
+    branches: [ gridsome ]
 
 jobs:
   build:
