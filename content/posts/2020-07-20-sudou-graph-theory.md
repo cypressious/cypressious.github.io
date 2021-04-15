@@ -69,7 +69,7 @@ We can see that tuples _have to be_ part of a component as they need to share ca
 
 ![](./images/sudoku-graph1_after.png)
 
-If, however, the tuple is part of a bigger component, then it must be useful, i.e. there are candidates that can be eliminated. In our original case, the tuple helps us eliminate us 1 and 9 from the rest of the component.
+If, however, the tuple is part of a bigger component, then it must be useful, i.e. there are candidates that can be eliminated. In our original case, the tuple helps us eliminate 1 and 9 from the rest of the component.
 
 ![](./images/sudoku-graph1_colored.png)
 
