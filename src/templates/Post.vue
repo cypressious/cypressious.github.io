@@ -122,6 +122,8 @@ export default class Post extends Vue {
         post: {
             title: string
             description: string
+            date: string
+            twitter?: string
         }
     }
 }
