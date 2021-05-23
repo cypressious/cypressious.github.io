@@ -7,7 +7,8 @@
     "explore": "gridsome explore",
     "upgrades": "yarn upgrade-interactive --latest",
     "predeploy": "gridsome build",
-    "deploy": "gh-pages -b master -d dist"
+    "deploy": "gh-pages -b master -d dist",
+    "purgecss": "node .scripts/purgecss.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.35",
@@ -28,6 +29,7 @@
     "@types/lodash-es": "4.17.4",
     "gridsome-plugin-typescript": "0.4.0",
     "node-sass": "5.0.0",
+    "purgecss": "4.0.3",
     "sass-loader": "10.2.0",
     "ts-loader": "8.3.0",
     "typescript": "4.2.4",
