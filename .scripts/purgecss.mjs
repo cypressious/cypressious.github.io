@@ -7,5 +7,11 @@ const purgeCSSResult = await new PurgeCSS().purge({
 });
 
 for (const result of purgeCSSResult) {
+    if (result.rejected) {
+        console.error(result.rejected);
+        continue;
+    }
+
+    console.log('optimized', result.file);
     await promises.writeFile(result.file, result.css);
 }
