@@ -1,4 +1,4 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { config, library } from '@fortawesome/fontawesome-svg-core';
 import {
     faAndroid,
     faFirefoxBrowser,
@@ -13,7 +13,9 @@ import {
     faXing
 } from '@fortawesome/free-brands-svg-icons';
 import { faArrowLeft, faCircle, faEye, faFilePdf, faGlobe, faVideo } from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
+config.autoAddCss = false;
 library.add(
     faCircle, faEye, faFilePdf, faVideo, faArrowLeft,
     faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5,
