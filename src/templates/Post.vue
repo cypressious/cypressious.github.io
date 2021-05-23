@@ -1,5 +1,6 @@
 <style scoped lang="scss">
 @import "../styles/colors";
+@import "~bulma/sass/utilities/initial-variables";
 
 .content::v-deep {
     p {
