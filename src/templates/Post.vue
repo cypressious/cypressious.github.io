@@ -6,7 +6,7 @@
     p {
         font-size: 1.25rem;
         text-align: justify;
-        line-height: 1.25;
+        line-height: 1.6;
     }
 
     .tag, .number, .label {
