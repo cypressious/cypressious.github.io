@@ -1,7 +1,7 @@
 ---
 title: IT Consultant & Full Stack Developer
 at: Rüdinger GmbH & Co. KG
-when: 2019 - present
+when: 2019 - 2021
 order: 5
 tags: [C#, Typescript]
 ---
