@@ -1,13 +1,6 @@
-<style scoped>
-.icon {
-    margin-left: .25rem;
-    margin-right: .25rem;
-}
-</style>
-
 <template>
     <div class="tile is-ancestor">
-        <div class="tile is-parent">
+        <div class="tile is-parent is-vertical">
             <div class="tile is-child notification is-link">
                 <div class="title level is-mobile">
                     <div class="level-left">
@@ -24,10 +17,26 @@
                 <ul class="is-size-5">
                     <li>Java</li>
                     <li>Kotlin</li>
+                    <li>Spring Boot</li>
+                    <li>Android</li>
                     <li>Gradle</li>
-                    <li>RxJava</li>
                     <li>IntelliJ IDEA</li>
-                    <li>Android Studio</li>
+                </ul>
+            </div>
+
+            <div class="tile is-child notification is-success">
+                <div class="title level is-mobile">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <FontAwesomeIcon :icon="['fa', 'database']"/>
+                        </div>
+                        <div class="level-item">Databases</div>
+                    </div>
+                </div>
+                <ul class="is-size-5">
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>Redis</li>
                 </ul>
             </div>
         </div>
@@ -61,6 +70,9 @@
                 <ul class="is-size-5">
                     <li>Typescript</li>
                     <li>Vue.js</li>
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>WebStorm</li>
                 </ul>
             </div>
         </div>
