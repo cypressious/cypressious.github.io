@@ -95,5 +95,25 @@
         "href": "https://github.com/cypressious/vue3-sudoku-solver"
       }
     ]
+  },
+  {
+    "title": "Angular Split Buttons",
+    "subtitle": "An extension for IntelliJ IDEA and WebStorm for quickly toggling between related Angular files",
+    "tags": [
+      "Kotlin", "IntelliJ Extensions"
+    ],
+    "links": [
+      {
+        "icon": "globe",
+        "iconCategory": "fa",
+        "title": "JB Marketplace",
+        "href": "https://plugins.jetbrains.com/plugin/18304-angular-split-view-buttons"
+      },
+      {
+        "icon": "github",
+        "title": "Github",
+        "href": "https://github.com/cypressious/intellij-angular-split-buttons"
+      }
+    ]
   }
 ]
