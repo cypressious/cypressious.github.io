@@ -4677,10 +4677,10 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gridsome-plugin-rss@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-rss/-/gridsome-plugin-rss-1.2.0.tgz#9614f16bf77b97b8e6471428c8487195cf7f9168"
-  integrity sha512-rC96wu1RhMjHnrdH2AKz6zcBkdNfGSVyULXUQeFlvp74uNT9u71roRI/JlMLayk+ViMsUnxMFSJ6ExIwHTSYZQ==
+gridsome-plugin-rss@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-rss/-/gridsome-plugin-rss-1.3.0.tgz#ba58e3274385f923be8d046335d28f6c27b93fb7"
+  integrity sha512-IN5l/EkakTTOhJGZqQvhddRYb1Xp2YxLYAL0Cyd1bIP9qJ2tMzH8c/0RI6F3xKbsZ99HYpdTCk/qLEj1EPBIKA==
   dependencies:
     rss "^1.2.2"
 
