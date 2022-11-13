@@ -1,4 +1,5 @@
 import { config, library } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import {
     faAndroid,
     faFirefoxBrowser,
@@ -7,6 +8,7 @@ import {
     faHtml5,
     faJava,
     faLinkedin,
+    faMastodon,
     faMicrosoft,
     faStackOverflow,
     faTwitter,
@@ -21,11 +23,10 @@ import {
     faGlobe,
     faVideo
 } from '@fortawesome/free-solid-svg-icons';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
 library.add(
     faCircle, faEye, faFilePdf, faVideo, faArrowLeft,
     faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5,
-    faFirefoxBrowser, faGlobe, faDatabase
+    faFirefoxBrowser, faGlobe, faDatabase, faMastodon,
 );
