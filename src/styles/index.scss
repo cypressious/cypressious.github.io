@@ -1,5 +1,6 @@
 $spacing-values: ("1": 1rem, "2": 2rem, "3": 3rem);
 $spacing-directions: ("bottom": "b");
+$container-max-width: 900px;
 
 @import "colors";
 @import "~bulma/bulma";
