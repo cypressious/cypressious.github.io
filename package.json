@@ -26,7 +26,7 @@
     "lodash-es": "4.17.21"
   },
   "devDependencies": {
-    "@types/lodash-es": "4.17.9",
+    "@types/lodash-es": "4.17.10",
     "gridsome-plugin-typescript": "0.4.0",
     "purgecss": "5.0.0",
     "sass": "1.56.2",
