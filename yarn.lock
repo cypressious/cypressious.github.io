@@ -8758,10 +8758,10 @@ sass-loader@10.5.2:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@1.79.6:
-  version "1.79.6"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.79.6.tgz#35a53c3dbaf66a25f132979f47346521e4ef77cb"
-  integrity sha512-PVVjeeiUGx6Nj4PtEE/ecwu8ltwfPKzHxbbVmmLj4l1FYHhOyfA0scuVF8sVaa+b+VY4z7BVKjKq0cPUQdUU3g==
+sass@1.80.3:
+  version "1.80.3"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.80.3.tgz#3f63dd527647d2b3de35f36acb971bda80517423"
+  integrity sha512-ptDWyVmDMVielpz/oWy3YP3nfs7LpJTHIJZboMVs8GEC9eUmtZTZhMHlTW98wY4aEorDfjN38+Wr/XjskFWcfA==
   dependencies:
     "@parcel/watcher" "^2.4.1"
     chokidar "^4.0.0"
