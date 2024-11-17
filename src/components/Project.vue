@@ -1,9 +1,9 @@
 <style scoped lang="scss">
-@import '~bulma/sass/utilities/initial-variables';
+@use '~bulma/sass/utilities/initial-variables';
 
 .notification {
     background-color: unset;
-    border: $grey-lighter 1px solid;
+    border: initial-variables.$grey-lighter 1px solid;
 }
 </style>
 

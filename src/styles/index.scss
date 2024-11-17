@@ -1,9 +1,16 @@
-$spacing-values: ("1": 1rem, "2": 2rem, "3": 3rem);
-$spacing-directions: ("bottom": "b");
-$container-max-width: 900px;
-
-@import "colors";
-@import "~bulma/bulma";
+@use "colors";
+@use "~bulma/bulma" with (
+  $spacing-values: ("1": 1rem, "2": 2rem, "3": 3rem),
+  $spacing-directions: ("bottom": "b"),
+  $container-max-width: 900px,
+  $primary: colors.$primary,
+  $success: colors.$green,
+  $info: colors.$blue,
+  $link: colors.$blue,
+  $warning: colors.$yellow,
+  $danger: colors.$red,
+  $menu-item-active-background-color: colors.$primary
+);
 
 .row-full {
   width: 100vw;
@@ -13,9 +20,9 @@ $container-max-width: 900px;
 
   > * {
     margin: 0 auto;
-    max-width: $fullhd;
+    max-width: bulma.$fullhd;
 
-    @media (max-width: $desktop) {
+    @media (max-width: bulma.$desktop) {
       margin-left: -.25rem;
       margin-right: -.25rem;
     }

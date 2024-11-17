@@ -1,6 +1,6 @@
 <style scoped lang="scss">
-@import "../styles/colors";
-@import "~bulma/sass/utilities/initial-variables";
+@use "../styles/colors";
+@use "~bulma/sass/utilities/initial-variables";
 
 .content::v-deep {
     p {
@@ -48,10 +48,10 @@
         &::after {
             display: block;
             text-align: center;
-            font-weight: $weight-semibold;
+            font-weight: initial-variables.$weight-semibold;
             text-transform: uppercase;
-            background-color: $primary;
-            color: $white;
+            background-color: colors.$primary;
+            color: initial-variables.$white;
         }
     }
 

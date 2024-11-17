@@ -1,5 +1,5 @@
 <style scoped lang="scss">
-@import '~bulma/sass/utilities/initial-variables';
+@use '~bulma/sass/utilities/initial-variables';
 
 .main-content {
     padding-top: 2rem;
@@ -10,7 +10,7 @@
     max-width: 60em;
 }
 
-@media (max-width: $desktop) {
+@media (max-width: initial-variables.$desktop) {
     .main-content {
         padding-left: .5rem;
         padding-right: .5rem;
