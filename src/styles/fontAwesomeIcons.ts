@@ -2,6 +2,7 @@ import { config, library } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import {
     faAndroid,
+    faBluesky,
     faFirefoxBrowser,
     faGithub,
     faGooglePlay,
@@ -28,5 +29,5 @@ config.autoAddCss = false;
 library.add(
     faCircle, faEye, faFilePdf, faVideo, faArrowLeft,
     faGithub, faStackOverflow, faTwitter, faLinkedin, faXing, faGooglePlay, faJava, faAndroid, faMicrosoft, faHtml5,
-    faFirefoxBrowser, faGlobe, faDatabase, faMastodon,
+    faFirefoxBrowser, faGlobe, faDatabase, faMastodon, faBluesky,
 );

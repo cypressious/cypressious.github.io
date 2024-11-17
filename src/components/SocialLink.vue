@@ -2,13 +2,17 @@
 .social-icon {
     margin-right: 1rem;
 }
+
+.the-icon {
+    width: 100%;
+}
 </style>
 
 <template>
     <a :href="href" target="_blank" :rel="combinedRels" :title="title" class="social-icon">
         <FontAwesomeLayers class="fa-3x has-text-primary">
             <FontAwesomeIcon icon="circle"/>
-            <FontAwesomeIcon :icon="['fab', icon]" transform="shrink-7" class="has-text-white"/>
+            <FontAwesomeIcon :icon="['fab', icon]" transform="shrink-7" class="the-icon has-text-white"/>
         </FontAwesomeLayers>
     </a>
 </template>

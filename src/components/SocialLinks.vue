@@ -5,6 +5,7 @@
                     href="https://stackoverflow.com/users/615306/kirill-rakhman/"/>
         <SocialLink icon="twitter" title="Twitter" href="https://twitter.com/Cypressious"/>
         <SocialLink icon="mastodon" title="Mastodon" href="https://sueden.social/@kirillrakhman" :rels="['me']"/>
+        <SocialLink icon="bluesky" title="Bluesky" href="https://bsky.app/profile/rakhman.info"/>
         <SocialLink icon="linkedin" title="LinkedIn" href="https://www.linkedin.com/in/kirillrakhman"/>
         <SocialLink icon="xing" title="Xing" href="https://www.xing.com/profile/Kirill_Rakhman"/>
     </div>
