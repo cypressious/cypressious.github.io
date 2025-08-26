@@ -29,7 +29,7 @@
     "@types/lodash-es": "4.17.12",
     "gridsome-plugin-typescript": "0.4.0",
     "purgecss": "5.0.0",
-    "sass": "1.81.1",
+    "sass": "1.91.0",
     "sass-loader": "10.5.2",
     "ts-loader": "8.3.0",
     "typescript": "4.2.4",
