@@ -4,6 +4,7 @@ description: Early patterns with Kotlin 2.3’s new context parameters. Key take
   extensions, the holder pattern, and deprecated overloads for gradual migration.   
 date: 2025-08-29
 slug: kotlin-emerging-patterns-with-context-parameters
+bluesky: https://bsky.app/profile/rakhman.info
 ---
 
 [Context parameters](https://github.com/Kotlin/KEEP/blob/context-parameters/proposals/context-parameters.md) are a new

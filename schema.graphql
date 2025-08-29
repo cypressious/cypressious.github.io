@@ -141,6 +141,7 @@ type Post implements Node {
     ): Int
     title: String
     twitter: String
+    bluesky: String
 }
 
 type PostConnection implements NodeConnection {
@@ -532,6 +533,7 @@ input PostFilterInput {
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
     twitter: StringQueryOperatorInput
+    bluesky: StringQueryOperatorInput
 }
 
 input Post_FileInfoFilterInput {
