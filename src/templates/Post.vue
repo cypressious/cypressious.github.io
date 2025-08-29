@@ -94,6 +94,13 @@
             </a></h2>
         </div>
 
+        <div v-if="$page.post.bluesky" class="discuss mb-3">
+            <h2 class="is-size-4"><a :href="$page.post.bluesky" rel="noopener" target="_blank">
+                <FontAwesomeIcon :icon="['fab', 'bluesky']"/>
+                Discuss on Bluesky
+            </a></h2>
+        </div>
+
         <g-link to="/blog">
             <FontAwesomeIcon icon="arrow-left"/>
             All Blog Posts
@@ -125,6 +132,7 @@ export default class Post extends Vue {
             description: string
             date: string
             twitter?: string
+            bluesky?: string
         }
     }
 }
@@ -138,6 +146,7 @@ query Post ($path: String!) {
         content
         date (format: "D MMMM YYYY")
         twitter
+        bluesky
         description
     }
 }
