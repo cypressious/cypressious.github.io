@@ -2,8 +2,9 @@
 
 Built using
 
-- Gridsome SSG framework (doesn't seem to be maintained anymore)
-- Vue
+- Nuxt 3 (migrated from Gridsome)
+- @nuxt/content for Markdown content
+- Vue 3
 - SASS
 - Bulma
 
@@ -18,12 +19,12 @@ yarn
 
 ### Local development
 ```
-yarn develop
+yarn dev
 ```
 
 ### Building production
 ```
-yarn build
+yarn generate
 ```
 
 ## Deployment
