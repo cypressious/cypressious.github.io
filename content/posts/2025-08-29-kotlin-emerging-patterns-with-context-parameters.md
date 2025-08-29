@@ -1,6 +1,6 @@
 ---
 title: "Kotlin: Emerging Patterns with Context Parameters"
-description: Early patterns with Kotlin 2.3’s new context parameters. Key takeaways include bridge methods for member
+description: Early patterns with Kotlin 2.2’s new context parameters. Key takeaways include bridge methods for member
   extensions, the holder pattern, and deprecated overloads for gradual migration.   
 date: 2025-08-29
 slug: kotlin-emerging-patterns-with-context-parameters
@@ -8,7 +8,7 @@ bluesky: https://bsky.app/profile/rakhman.info/post/3lxjtksiujk2q
 ---
 
 [Context parameters](https://github.com/Kotlin/KEEP/blob/context-parameters/proposals/context-parameters.md) are a new
-preview feature in Kotlin 2.3 and supersede the experimental context receivers. In the Kotlin Compiler codebase, we have
+preview feature in Kotlin 2.2 and supersede the experimental context receivers. In the Kotlin Compiler codebase, we have
 been using this new language feature for a short while, and here I'm sharing some patterns that have emerged so far.
 
 ## Bridge Methods
