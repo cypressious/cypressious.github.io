@@ -31,7 +31,7 @@
     "purgecss": "5.0.0",
     "sass": "1.91.0",
     "sass-loader": "10.5.2",
-    "ts-loader": "8.3.0",
+    "ts-loader": "8.4.0",
     "typescript": "4.2.4",
     "vue-class-component": "7.2.6",
     "vue-property-decorator": "9.1.2"
